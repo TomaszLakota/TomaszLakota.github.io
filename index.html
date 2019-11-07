@@ -2,11 +2,9 @@
 
 <head>
     <meta charset="utf-8">
-
-    <!-- <title>Elsys</title> -->
+    <title>Elsys</title>
     <meta name="description" content="Elsys systemy automatyki">
     <meta name="author" content="Tomasz Lakota">
-
     <link rel="stylesheet" href="styles.css">
     <link
         href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900'
@@ -14,7 +12,6 @@
 </head>
 
 <body>
-
     <ul class="nav__ul">
         <li class="nav__li"><a href="#">Strona główna</a></li>
         <li class="nav__li"><a href="#">Automatyka</a></li>
@@ -29,9 +26,6 @@
         <li class="float-right nav__li"><a href="#">Kontakt</a></li>
     </ul>
     <div class="main">
-        <div class="main__nav">
-
-        </div>
         <div class="main__jumbo-container">
             <div class="main__info">
                 <ul>
@@ -41,10 +35,11 @@
                 </ul>
             </div>
             <div class="main__jumbo-overlay main__jumbo-overlay--left">
-                <div class="main__empty"></div>
+                <div class="main__empty"><a href="#"><span class="main__span-link"></span></a></div>
                 <div class="main__jumbo main__jumbo--automatyka">
-                    <div class="main__jumbo-header">
-                        <a href="#" class="main__jumbo-link">Automatyka</a>
+                    <div class="main__jumbo-header-container">
+                        <span class="main__jumbo-header">Automatyka</span>
+                        <a href="#"><span class="main__span-link"></span></a>
                     </div>
                 </div>
             </div>
@@ -52,11 +47,12 @@
         <div class="main__jumbo-container">
             <div class="main__jumbo-overlay main__jumbo-overlay--right">
                 <div class="main__jumbo main__jumbo--fotowoltaika">
-                    <div class="main__jumbo-header main__jumbo-header--right">
-                        <a href="#" class="main__jumbo-link">Fotowoltaika</a>
+                    <div class="main__jumbo-header main__jumbo-header-container--right">
+                        <a href="#"><span class="main__span-link"></span></a>
+                        <span href="#" class="main__jumbo-header">Fotowoltaika</span>
                     </div>
                 </div>
-                <div class="main__empty main__empty--right"></div>
+                <div class="main__empty main__empty--right"><a href="#"><span class="main__span-link"></span></a></div>
             </div>
             <div class="main__info main__info--right">
                 <ul>
@@ -66,9 +62,6 @@
                 </ul>
             </div>
         </div>
-
-
-
         <script src="js/scripts.js"></script>
 </body>
 

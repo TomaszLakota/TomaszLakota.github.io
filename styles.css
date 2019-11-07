@@ -9,11 +9,9 @@ html {
     padding: 0;
 }
 
-
 body {
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 .main {
@@ -32,6 +30,7 @@ body {
     left: 0;
     right: 0;
     transition: 1s;
+    flex-shrink: 0;
 }
 
 .main__jumbo-container {
@@ -43,7 +42,7 @@ body {
 
 .main__info {
     min-width: 400px;
-    z-index: -222;
+    z-index: -2;
     font-size: 2em;
 }
 
@@ -54,7 +53,6 @@ body {
 
 .main__jumbo-overlay {
     position: relative;
-
     width: 100%;
     flex-shrink: 0;
     display: flex;
@@ -67,7 +65,6 @@ body {
 
 .main__jumbo-overlay--left:hover {
     left: -400px;
-    transition: 1s;
 }
 
 .main__jumbo-overlay--right {
@@ -78,31 +75,23 @@ body {
     left: -400px;
 }
 
-
+.main__span-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
 
 .main__empty {
     min-width: 400px;
     flex-shrink: 0;
+    position: relative;
 }
 
 .main__empty--right {
     right: 0;
-}
-
-.main__jumbo--automatyka {
-    transition: 1s;
-    left: 0;
-    /* right:0; */
-    width: 100%;
-    flex-shrink: 0;
-}
-
-.main__jumbo--fotowoltaika {
-    transition: 1s;
-    left: 0;
-    /* right:0; */
-    width: 100%;
-    flex-shrink: 0;
 }
 
 .main__jumbo--automatyka::before,
@@ -115,6 +104,9 @@ body {
     z-index: -1;
     filter: blur(5px);
     background-size: cover;
+}
+
+.main__jumbo--automatyka::before {
     background-image: url("http://icontrol.com.pl/wp-content/uploads/2017/07/IMG_3782-1024x683-1024x585.jpg");
 }
 
@@ -122,17 +114,17 @@ body {
     background-image: url("https://d-art.ppstatic.pl/kadry/k/r/1/e2/9c/5d41660f06614_o_large.jpg");
 }
 
-.main__jumbo-header {
+.main__jumbo-header-container {
     display: flex;
     align-items: center;
     height: 100%;
 }
 
-.main__jumbo-header--right {
+.main__jumbo-header-container--right {
     justify-content: flex-end;
 }
 
-.main__jumbo-link {
+.main__jumbo-header {
     padding: 100px;
     text-decoration: none;
     color: white;
@@ -143,16 +135,12 @@ body {
 }
 
 @media screen and (min-width: 800px) {
-    .main__jumbo-link {
+    .main__jumbo-header {
         font-size: 60px;
     }
 }
 
-
-
-
-
-
+/* navbar styles */
 .nav__ul {
     list-style-type: none;
     background-color: #092e64;
