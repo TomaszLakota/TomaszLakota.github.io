@@ -14,7 +14,7 @@ body {
     width: 100%;
 }
 
-.main {
+.mp {
     height: calc(100% - 50px);
     width: 100%;
     display: flex;
@@ -23,7 +23,7 @@ body {
     align-content: flex-end;
 }
 
-.main__jumbo {
+.mp__jumbo {
     width: 100%;
     height: 100%;
     position: relative;
@@ -33,25 +33,25 @@ body {
     flex-shrink: 0;
 }
 
-.main__jumbo-container {
+.mp__jumbo-container {
     width: 100%;
     height: 50%;
     display: flex;
     overflow: hidden;
 }
 
-.main__info {
+.mp__info {
     min-width: 400px;
     z-index: -2;
     font-size: 2em;
 }
 
-.main__info--right {
+.mp__info--right {
     position: relative;
     left: -400px;
 }
 
-.main__jumbo-overlay {
+.mp__jumbo-overlay {
     position: relative;
     width: 100%;
     flex-shrink: 0;
@@ -59,23 +59,23 @@ body {
     transition: 1s;
 }
 
-.main__jumbo-overlay--left {
+.mp__jumbo-overlay--left {
     left: -800px;
 }
 
-.main__jumbo-overlay--left:hover {
+.mp__jumbo-overlay--left:hover {
     left: -400px;
 }
 
-.main__jumbo-overlay--right {
+.mp__jumbo-overlay--right {
     left: 0px;
 }
 
-.main__jumbo-overlay--right:hover {
+.mp__jumbo-overlay--right:hover {
     left: -400px;
 }
 
-.main__span-link {
+.mp__span-link {
     position: absolute;
     left: 0;
     right: 0;
@@ -84,18 +84,18 @@ body {
     z-index: 1;
 }
 
-.main__empty {
+.mp__empty {
     min-width: 400px;
     flex-shrink: 0;
     position: relative;
 }
 
-.main__empty--right {
+.mp__empty--right {
     right: 0;
 }
 
-.main__jumbo--automatyka::before,
-.main__jumbo--fotowoltaika::before {
+.mp__jumbo--automatyka::before,
+.mp__jumbo--fotowoltaika::before {
     content: "";
     position: absolute;
     left: 0;
@@ -106,25 +106,25 @@ body {
     background-size: cover;
 }
 
-.main__jumbo--automatyka::before {
+.mp__jumbo--automatyka::before {
     background-image: url("http://icontrol.com.pl/wp-content/uploads/2017/07/IMG_3782-1024x683-1024x585.jpg");
 }
 
-.main__jumbo--fotowoltaika::before {
+.mp__jumbo--fotowoltaika::before {
     background-image: url("https://d-art.ppstatic.pl/kadry/k/r/1/e2/9c/5d41660f06614_o_large.jpg");
 }
 
-.main__jumbo-header-container {
+.mp__jumbo-header-container {
     display: flex;
     align-items: center;
     height: 100%;
 }
 
-.main__jumbo-header-container--right {
+.mp__jumbo-header-container--right {
     justify-content: flex-end;
 }
 
-.main__jumbo-header {
+.mp__jumbo-header {
     padding: 100px;
     text-decoration: none;
     color: white;
@@ -135,7 +135,7 @@ body {
 }
 
 @media screen and (min-width: 800px) {
-    .main__jumbo-header {
+    .mp__jumbo-header {
         font-size: 60px;
     }
 }
@@ -162,36 +162,142 @@ body {
     float: left;
 }
 
-.nav__li a {
+.nav_li--right {
+    float: right;
+}
+
+.nav__link {
     text-decoration: none;
     color: white;
     padding: 1em;
     display: inline-block;
 }
 
-.dropdown:hover .dropdown-button,
-.nav__li a:hover {
+.nav__dropdown:hover .nav__dropdown-button,
+.nav__link:hover {
     background-color: #549eec;
 }
 
-.dropdown-container {
+.nav__dropdown-container {
     display: none;
     position: absolute;
     box-shadow: 0px 10px 10px 0px black;
     z-index: 122;
 }
 
-.dropdown:hover .dropdown-container {
+.nav__dropdown:hover .nav__dropdown-container {
     display: block;
 }
 
-.dropdown-container a {
+.nav__dropdown-element {
     display: block;
     color: black;
     background-color: white;
     min-width: 200px;
 }
 
-.float-right {
-    float: right;
+.nav__dropdown-element:hover {
+    background-color: #549eec;
+}
+
+.nav__dropdown-link {
+    text-decoration: none;
+    color: black;
+    padding: 1em;
+    display: inline-block;
+    width: 100%;
+}
+
+.main__container {
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main__article {
+    margin: 50px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 5px 1px black;
+    display: inline-block;
+    height: fit-content;
+    font-family: sans-serif;
+}
+
+.main__text {
+    font-family: sans-serif;
+    font-size: 14pt;
+}
+
+.emoji__container {
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.emoji__inner-container {
+    height: calc(100% - 64px);
+    width: 100%;
+    background: white;
+    box-shadow: 0 0 5px 1px black;
+    display: inline-block;
+    font-family: sans-serif;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(-180deg);
+    }
+    50% {
+        transform: rotate(-540deg);
+    }
+    70% {
+        transform: rotate(-720deg);
+    }
+    100% {
+        transform: rotate(-720deg);
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0px);
+    }
+    40% {
+        transform: translateY(-450px);
+    }
+    80% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.emoji {
+    animation-name: jump;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    font-size: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    display: block;
+}
+
+.emoji2 {
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: block;
 }
