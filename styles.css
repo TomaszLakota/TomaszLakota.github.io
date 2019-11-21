@@ -14,7 +14,7 @@ body {
 }
 
 .mp {
-    height: calc(100% - 100px);
+    height: calc(100% - 64px);
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -242,9 +242,10 @@ body {
 @media screen and (min-width: 1200px) {
     .main__article {
         margin: 50px;
-        padding: 20px;
+        padding: 50px;
         background: white;
         box-shadow: 0 0 5px 1px black;
+        max-width: 1000px;
     }
 
     .main__text {
