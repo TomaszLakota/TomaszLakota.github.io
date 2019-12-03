@@ -1,6 +1,6 @@
 # Landing page
 
-Stworzona z wykorzystaniem tylko HTMLa i CSS (z metodologią BEM, ale bez Sass).
-Nie zawiera javascriptu, ale wykorzystuje `transition` i `animation`. 
+Simple page developed using HTML5 and CSS3 (used BEM naming convention, but not Sass).
+Doesn't use any javascript, but uses some cool CSS animations made with `transition` and `animation`. 
 
-Strona stworzona na CodersCamp 2019
+Created during CodersCamp 2019
